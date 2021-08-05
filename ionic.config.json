@@ -1,0 +1,10 @@
+{
+  "name": "inmoApp",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

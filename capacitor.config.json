@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "inmoApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

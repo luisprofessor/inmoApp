@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title color="dark">login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+      <form (ngSubmit)="login(flogin)" #flogin="ngForm">
+        <ion-grid fixed>
+
+          <ion-row>
+            <ion-col>
+              <ion-avatar class="image-center">
+                <img src="/assets/login.png">
+              </ion-avatar>
+              
+            </ion-col>
+          </ion-row>
+        
+          <ion-row>
+            <ion-col>
+              
+                <ion-list>
+                  
+                  <ion-item>
+                    <ion-label>Email</ion-label>
+                    <ion-input name="email"
+                                type="email"
+                                [(ngModel)]="loginUser.email"
+                                required></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label>Password</ion-label>
+                    <ion-input name="password"
+                                type="password"
+                                [(ngModel)]="loginUser.password"
+                                required></ion-input>
+                  </ion-item>
+
+                </ion-list>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit"
+                          color="tertiary"
+                          shape="round"
+                          expand="block"
+                          color="primary">
+                Login
+              </ion-button>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </form>
+    
+
+
+
+</ion-content>
+
+
+<ion-footer no-border>
+ 
+</ion-footer>
