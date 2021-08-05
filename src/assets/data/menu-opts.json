@@ -1,0 +1,19 @@
+[
+
+    {
+      "icon":"caret-back-outline",
+      "name":"Ubicación",
+      "redirectTo":"/mapa"
+    },
+    {
+      "icon":"caret-back-outline",
+      "name":"Perfil",
+      "redirectTo":"/perfil"
+    },
+    {
+      "icon":"caret-back-outline",
+      "name":"Inmuebles",
+      "redirectTo":"/inmuebles"
+    }
+  
+  ]

@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Componente } from './interfaces/interfaces';
+import { MenuController } from '@ionic/angular';
+import { DataService } from './services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,11 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  rutas:Observable<Componente[]>;
+  constructor(private menuController:MenuController, private dataService:DataService) { }
+
+  ngOnInit() {
+    this.rutas=this.dataService.getMenuOpts();
+    console.log('leyendo rutas');
+  }
 }
