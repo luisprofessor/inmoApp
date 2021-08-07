@@ -2,4 +2,76 @@
 
 <ion-content>
 
+    <ion-content>
+        
+               
+        <form>
+            <ion-row>
+              <ion-col>
+                
+                  <ion-list>
+                    
+                    <ion-item>
+                      <ion-label>ID Propietario</ion-label>
+                      <ion-input name="idPropietario"
+                       readonly [(ngModel)]="usuario.idPropietario"
+                                 ></ion-input>
+                    </ion-item>
+      
+                    <ion-item>
+                      <ion-label>DNI</ion-label>
+                      <ion-input name="dni"
+                                 type="text"
+                                 required [(ngModel)]="usuario.dni"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Apellido</ion-label>
+                        <ion-input name="apellido"
+                                   type="text"
+                                   required [(ngModel)]="usuario.apellido"></ion-input>
+                      </ion-item>
+
+                      <ion-item>
+                        <ion-label>Nombre</ion-label>
+                        <ion-input name="nombre"
+                                   type="text"
+                                   required [(ngModel)]="usuario.nombre"></ion-input>
+                      </ion-item>
+
+                      <ion-item>
+                        <ion-label>Teléfono</ion-label>
+                        <ion-input name="telefono"
+                                   type="text"
+                                   required [(ngModel)]="usuario.telefono"></ion-input>
+                      </ion-item>
+
+                      <ion-item>
+                        <ion-label>EMail</ion-label>
+                        <ion-input name="email"
+                                   type="email"
+                                   required [(ngModel)]="usuario.email"></ion-input>
+                      </ion-item>
+      
+      
+                  </ion-list>
+              </ion-col>
+            </ion-row>
+            
+            <ion-row>
+              <ion-col class="ion-text-center">
+                <ion-button type="submit"
+                            color="tertiary"
+                            shape="round">
+                Actualizar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          
+        </form>
+      
+      
+      </ion-content>
+      
+
 </ion-content>

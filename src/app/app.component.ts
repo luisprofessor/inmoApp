@@ -15,6 +15,6 @@ export class AppComponent {
 
   ngOnInit() {
     this.rutas=this.dataService.getMenuOpts();
-    console.log('leyendo rutas');
+    
   }
 }
