@@ -4,6 +4,13 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="first"></ion-menu-button>
     </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()"
+                  color="danger">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <!-- Esta es una forma de agregar un boton de menu-->
     <!-- <ion-buttons slot="start">
       <ion-button (click)="abrirMenu()" slot="start" >
@@ -16,3 +23,4 @@
     <ion-title color="primary">Inmobiliaria La Punta</ion-title>
   </ion-toolbar>
 </ion-header>
+

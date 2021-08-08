@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: InmueblesPage
+  },
+  {
+    path: 'inmueble',
+    loadChildren: () => import('./inmueble/inmueble.module').then( m => m.InmueblePageModule)
   }
 ];
 

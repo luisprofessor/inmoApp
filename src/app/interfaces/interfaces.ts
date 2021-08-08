@@ -15,3 +15,11 @@ export interface Componente{
     clave?:string
 
   }
+
+  export interface Inmueble{
+    id?:number,
+    direccion?:string,
+    ambientes?:number,
+    superficie?:number,
+    foto?:string
+  }

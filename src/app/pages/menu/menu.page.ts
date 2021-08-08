@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 
 
@@ -11,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 export class MenuPage implements OnInit {
 
   
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
     
+  }
+  logout(){
+    this.usuarioService.logout();
   }
 }

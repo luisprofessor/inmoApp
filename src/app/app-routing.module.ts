@@ -31,11 +31,8 @@ const routes: Routes = [
   {
     path: 'inmuebles',
     loadChildren: () => import('./pages/inmuebles/inmuebles.module').then( m => m.InmueblesPageModule)
-  },
-  {
-    path: 'inmueble',
-    loadChildren: () => import('./pages/inmueble/inmueble.module').then( m => m.InmueblePageModule)
-  },
+  }
+  
 ];
 
 @NgModule({

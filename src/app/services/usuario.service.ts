@@ -3,7 +3,7 @@ import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import {Storage} from '@ionic/storage-angular';
-import { Usuario } from '../interfaces/interfaces';
+import { Inmueble, Usuario } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -55,9 +55,15 @@ export class UsuarioService {
 
         });
         
-        
+  
+ }
 
-          
+ logout(){
+
+  this.token=null;
+  this.usuario=null;
+  this.storage.clear();
+  this.navCtrl.navigateRoot('/login',{animated:true});
 
  }
  async guardarToken(token:string){
@@ -83,7 +89,7 @@ export class UsuarioService {
       'authorization':'Bearer '+this.token
     });
 
-    console.log(headers.get('x-token'));
+    console.log(headers.get('authorization'));
     
     this.http.get('http://192.168.0.115:45455/api/propietarios',{headers})
       .subscribe(resp=>{
@@ -154,5 +160,19 @@ async actualizarPerfil(usuario:Usuario){
 
    });
   
+}
+
+obtenerInmuebles(){
+
+    
+    const headers=new HttpHeaders({
+      'authorization':'Bearer '+this.token
+    });
+
+    console.log(headers.get('authorization'));
+    
+    return this.http.get<Inmueble[]>('http://192.168.0.115:45455/api/inmuebles',{headers});
+     
+
 }
 }

@@ -1,5 +1,22 @@
 <app-header titulo="Inmuebles"></app-header>
 
 <ion-content>
+    <ion-grid fixed >
+        <ion-row>
+          <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let inmueble of inmuebles">
+            <ion-card (click)="onClick(inmueble)" >
+              <ion-img src="http://192.168.0.115:45455/{{inmueble.foto}}"></ion-img>
+              <ion-card-header>
+                <ion-card-subtitle>{{inmueble.ambientes}} ambientes</ion-card-subtitle>
+                <ion-card-title>{{inmueble.direccion}}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                {{inmueble.superficie}} mts. cuadrados
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
 
 </ion-content>
